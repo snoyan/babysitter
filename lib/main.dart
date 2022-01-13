@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             // primarySwatch: Colors.blue,
             ),
         routes: myRoutes,
-        initialRoute: '/home',
+        initialRoute: '/main_screen',
       ),
     );
   }
