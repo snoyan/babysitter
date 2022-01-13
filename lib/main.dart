@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         ],
         locale: const Locale(
             "fa", "IR"), // OR Locale('ar', 'AE') OR Other RTL locales,
-        title: 'پرستار',
+        title: ' پرستار کودک',
         theme: ThemeData(
             appBarTheme: const AppBarTheme(color: kBaseColor5),
             scaffoldBackgroundColor: kBaseColor5
