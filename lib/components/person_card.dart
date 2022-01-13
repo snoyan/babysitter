@@ -11,16 +11,27 @@ class PersonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
-          color: Colors.white,
+          decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(20))),
           child: Column(
             children: [
-              Container(
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Image(
-                  image: const AssetImage('assets/image/person.jpg'),
-                  height: MediaQuery.of(context).size.height * 0.15,
-                  width: MediaQuery.of(context).size.width * 0.3,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: const AssetImage('assets/image/person.jpg'),
+                      ),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(500),
+                        topRight: Radius.circular(500),
+                        bottomLeft: Radius.circular(1000),
+                        bottomRight: Radius.circular(1000),
+                      )),
+                  height: 100.0,
+                  width: 140,
                 ),
               ),
               const Text('نام : '),
