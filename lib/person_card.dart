@@ -19,12 +19,13 @@ class PersonCard extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Image(
                   image: const AssetImage('assets/image/person.jpg'),
-                  height: MediaQuery.of(context).size.height * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.15,
                   width: MediaQuery.of(context).size.width * 0.3,
                 ),
               ),
-              const Text('نام'),
-              const Text('توضیحات'),
+              const Text('نام : '),
+              const Text('توضیحات :'),
+              const Text('امتیاز :'),
             ],
           )),
       onTap: () {
