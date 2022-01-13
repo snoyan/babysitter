@@ -23,7 +23,8 @@ class PersonCard extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.3,
                 ),
               ),
-              const Text('sam'),
+              const Text('نام'),
+              const Text('توضیحات'),
             ],
           )),
       onTap: () {
