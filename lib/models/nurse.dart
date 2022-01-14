@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../constant.dart';
 
 class Nurse {
@@ -11,7 +9,8 @@ class Nurse {
   String exprience = '';
   int state = 0;
   String city = '';
-  //this should be an image path
+
+  /// .this should be an image path
   var docPath = '';
   String phone = '';
   int xpYEar = 0;
