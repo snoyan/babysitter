@@ -1,5 +1,5 @@
-import 'package:babysitter/screens/person_info_screen.dart';
-import 'package:babysitter/screens/ads_screen.dart';
+import 'package:babysitter/screens/nurseInfo/person_info_screen.dart';
+import 'package:babysitter/screens/ads/ads_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/main_screen.dart';

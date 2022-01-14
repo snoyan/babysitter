@@ -16,3 +16,5 @@ const Color kBaseColor4 = Color(0xff104581);
 
 ///Classic Blueconst
 const Color kBaseColor5 = Color(0xFFAA95FA); ///
+
+enum Gender { female,male }

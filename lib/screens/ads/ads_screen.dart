@@ -3,7 +3,7 @@
 import 'package:babysitter/components/person_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
-import '../data.dart';
+import '../../data.dart';
 
 class AdsScreen extends StatefulWidget {
   const AdsScreen({

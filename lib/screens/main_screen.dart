@@ -1,4 +1,4 @@
-import 'package:babysitter/screens/ads_screen.dart';
+import 'package:babysitter/screens/ads/ads_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
