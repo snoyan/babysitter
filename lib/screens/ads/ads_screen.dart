@@ -155,7 +155,7 @@ class BottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 56,
-      margin: EdgeInsets.symmetric(vertical: 24, horizontal: 12),
+      margin: const EdgeInsets.symmetric(vertical: 24, horizontal: 12),
       child: Row(
         children: <Widget>[
           Expanded(

@@ -22,7 +22,7 @@ class PersonCard extends StatelessWidget {
                   decoration: const BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.fill,
-                        image: const AssetImage('assets/image/person.jpg'),
+                        image: AssetImage('assets/image/person.jpg'),
                       ),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(500),
