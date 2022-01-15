@@ -7,6 +7,7 @@ class Nurse {
   String name = '';
   String family = '';
   String imgpath = '';
+  String rating = '';
   int age = 0;
   String exprience = '';
   int state = 0;
@@ -22,6 +23,7 @@ class Nurse {
       required this.name,
       required this.family,
       required this.imgpath,
+      required this.rating,
       required this.age,
       required this.exprience,
       required this.state,
@@ -45,5 +47,6 @@ class Nurse {
         phone = json['phone'],
         xpYEar = json['xpYear'],
         workConditions = json['workCondition'],
+        rating=json['rating'],
         gender = json['gender'];
 }

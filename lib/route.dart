@@ -7,5 +7,5 @@ import 'screens/main_screen.dart';
 final Map<String, WidgetBuilder> myRoutes = {
   MainScreen.routeName: (context) => const MainScreen(),
   AdsScreen.routeName: (context) => const AdsScreen(),
-  PersonInfo.routeName: (context) => const PersonInfo(),
+  NurseInfo.routeName: (context) =>  NurseInfo(),
 };

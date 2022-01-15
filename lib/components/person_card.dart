@@ -2,8 +2,13 @@
 
 import 'package:flutter/material.dart';
 
+import '../models/nurse.dart';
+import '../screens/nurseInfo/person_info_screen.dart';
+
 class PersonCard extends StatelessWidget {
+  final Nurse nurse;
   const PersonCard({
+    required this.nurse,
     Key? key,
   }) : super(key: key);
 
@@ -19,12 +24,12 @@ class PersonCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.fill,
-                        image: const AssetImage('assets/image/person.jpg'),
+                        image: AssetImage(nurse.imgpath),
                       ),
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(500),
                         topRight: Radius.circular(500),
                         bottomLeft: Radius.circular(1000),
@@ -34,14 +39,15 @@ class PersonCard extends StatelessWidget {
                   width: 140,
                 ),
               ),
-              const Text('نام : '),
-              const Text('توضیحات :'),
-              const Text('امتیاز :'),
+              Text('نام : ${nurse.name}'),
+              Text('سابقه کار :${nurse.xpYEar}'),
+              Text('امتیاز :${nurse.rating}'),
             ],
           )),
       onTap: () {
         print('Pressed');
-        Navigator.pushNamed(context, '/person_info');
+        Navigator.pushNamed(context, '/person_info',
+            arguments: NurseDetailsArguments(nurse: nurse));
       },
     );
   }

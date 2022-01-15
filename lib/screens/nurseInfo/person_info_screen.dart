@@ -1,21 +1,117 @@
+import 'package:babysitter/constant.dart';
 import 'package:flutter/material.dart';
 
-class PersonInfo extends StatelessWidget {
-  const PersonInfo({Key? key}) : super(key: key);
+import '../../models/nurse.dart';
+import 'components/header.dart';
+import 'components/nurse_call.dart';
+import 'components/nurse_description.dart';
+import 'components/nurse_document.dart';
+import 'components/nurse_information.dart';
+
+class NurseInfo extends StatelessWidget {
+  NurseInfo({Key? key}) : super(key: key);
   static String routeName = '/person_info';
   @override
   Widget build(BuildContext context) {
+    final NurseDetailsArguments agrs =
+        ModalRoute.of(context)!.settings.arguments as NurseDetailsArguments;
     return Scaffold(
-      body: SafeArea(
+        bottomNavigationBar: Container(
+          height: 80,
+          padding: const EdgeInsets.only(bottom: 15),
+          decoration: const BoxDecoration(
+            color: kBaseColor2,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(12),
+              topRight: Radius.circular(12),
+            ),
+          ),
           child: Center(
-              child: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 0),
-        child: Column(
-          children: const [
-            Text('اطلاعات پرستار'),
-          ],
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 45,
+                  width: MediaQuery.of(context).size.width * 0.39,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(70, 0),
+                      primary: kBaseColor5,
+                      padding: const EdgeInsets.all(0),
+                    ),
+                    onPressed: () {
+                      showModalBottomSheet(
+                        //isScrollControlled: true,
+
+                        context: context,
+                        builder: (context) => NurseDocument(),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      'دیدن مدارک',
+                      style: TextStyle(fontSize: 12, fontFamily: 'IranSans'),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Container(
+                  height: 45,
+                  width: MediaQuery.of(context).size.width * 0.39,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(70, 0),
+                      primary: kBaseColor4,
+                      padding: EdgeInsets.all(0),
+                    ),
+                    onPressed: () {
+                      showModalBottomSheet(
+                        //isScrollControlled: true,
+
+                        context: context,
+                        builder: (context) => NurseCall(),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'اطلاعات تماس',
+                      style: TextStyle(fontSize: 12, fontFamily: 'IranSans'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
-      ))),
-    );
+        backgroundColor: kBaseColor1,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: <Widget>[
+                Header(
+                  nurse: agrs.nurse,
+                ),
+                NurseInformation(agrs: agrs),
+                SizedBox(
+                  height: 10,
+                ),
+                NurseDescription(agrs: agrs)
+              ],
+            ),
+          ),
+        ));
   }
+}
+
+class NurseDetailsArguments {
+  final Nurse nurse;
+
+  NurseDetailsArguments({required this.nurse});
 }
