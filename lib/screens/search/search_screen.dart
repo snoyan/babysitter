@@ -10,37 +10,39 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      color: kBaseColor5,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            children: [
-              Flexible(
-                child: Card(
-                  child: TextField(
-                    onChanged: (value) {
-                      print('pressed');
-                    },
+    return Scaffold(
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        color: kBaseColor5,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              children: [
+                Flexible(
+                  child: Card(
+                    child: TextField(
+                      onChanged: (value) {
+                        print('pressed');
+                      },
+                    ),
                   ),
                 ),
-              ),
-              FloatingActionButton.small(
-                onPressed: () {
-                  print('pressed');
-                },
-                child: const Icon(
-                  Icons.search,
-                  color: kBaseColor5,
-                  size: 20.0,
+                FloatingActionButton.small(
+                  onPressed: () {
+                    print('pressed');
+                  },
+                  child: const Icon(
+                    Icons.search,
+                    color: kBaseColor5,
+                    size: 20.0,
+                  ),
                 ),
-              ),
-            ],
-          )
-        ],
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

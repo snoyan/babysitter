@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../models/nurse.dart';
-import '../screens/nurseInfo/person_info_screen.dart';
+import '../../../models/nurse.dart';
+import '../../nurseInfo/nurse_info_screen.dart';
 
 class PersonCard extends StatelessWidget {
   final Nurse nurse;
@@ -46,7 +46,7 @@ class PersonCard extends StatelessWidget {
           )),
       onTap: () {
         print('Pressed');
-        Navigator.pushNamed(context, '/person_info',
+        Navigator.pushNamed(context, '/nurse_info',
             arguments: NurseDetailsArguments(nurse: nurse));
       },
     );
