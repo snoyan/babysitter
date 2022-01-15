@@ -1,8 +1,6 @@
 import 'package:babysitter/constant.dart';
 import 'package:flutter/material.dart';
 
-
-
 import '../person_info_screen.dart';
 
 class NurseInformation extends StatelessWidget {
@@ -19,24 +17,22 @@ class NurseInformation extends StatelessWidget {
       height: 110,
       decoration: BoxDecoration(
         color: kBaseColor2,
-        borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(8),bottomRight: Radius.circular(8)),
+        borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8)),
         boxShadow: [
-          
-      BoxShadow(
-        color: Colors.black.withOpacity(0.5),
-        spreadRadius: 2,
-        blurRadius: 7,
-        offset: Offset(0, 5), // changes position of shadow
+          BoxShadow(
+            color: Colors.black.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 7,
+            offset: const Offset(0, 5), // changes position of shadow
+          ),
+        ],
       ),
-    ],
-      ),
-      
-      padding:
-          const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
       child: Column(
         children: [
           //btns madarek and  etelaat
-         /** Row(
+          /** Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -89,7 +85,7 @@ class NurseInformation extends StatelessWidget {
             ],
           ),
           */ //
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           //name and rete row
@@ -97,18 +93,18 @@ class NurseInformation extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                 "نام:  ${agrs.nurse.name}",
-                style: TextStyle(
+                "نام:  ${agrs.nurse.name}",
+                style: const TextStyle(
                     fontFamily: "IranSans", color: Colors.white),
               ),
               Text(
                 agrs.nurse.rating,
-                style: TextStyle(
+                style: const TextStyle(
                     fontFamily: "IranSans", color: Colors.white),
               ),
             ],
           ),
-         
+
           Divider(
             height: 5,
             color: Colors.grey.withOpacity(0.5),
@@ -117,17 +113,15 @@ class NurseInformation extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "سن: ${agrs.nurse.age}"
-               ,
-                style: TextStyle(
+                "سن: ${agrs.nurse.age}",
+                style: const TextStyle(
                     fontFamily: "IranSans", color: Colors.white),
               ),
               Text(
-              "سابقه کار: ${agrs.nurse.xpYEar} سال",
-                style: TextStyle(
+                "سابقه کار: ${agrs.nurse.xpYEar} سال",
+                style: const TextStyle(
                     fontFamily: "IranSans", color: Colors.white),
               ),
-              
             ],
           ),
           Divider(
@@ -137,14 +131,11 @@ class NurseInformation extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              
               Text(
-                "شهرستان: ${agrs.nurse.city}"
-               ,
-                style: TextStyle(
+                "شهرستان: ${agrs.nurse.city}",
+                style: const TextStyle(
                     fontFamily: "IranSans", color: Colors.white),
               ),
-              
             ],
           )
         ],
@@ -152,4 +143,3 @@ class NurseInformation extends StatelessWidget {
     );
   }
 }
-

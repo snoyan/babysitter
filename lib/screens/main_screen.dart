@@ -36,7 +36,7 @@ class _MainScreenState extends State<MainScreen> {
         floatingActionButton: FloatingActionButton(
           backgroundColor: kBaseColor2,
           child: Container(
-            padding: EdgeInsets.only(top: 6, left: 3),
+            padding: const EdgeInsets.only(top: 6, left: 3),
             child: const Center(
                 child: Text(
               " پرستار\n   شو  ",
@@ -89,7 +89,7 @@ class AnimatedBottomNav extends StatelessWidget {
     return BottomAppBar(
       color: kBaseColor1,
       shape: const CircularNotchedRectangle(),
-      child: Container(
+      child: SizedBox(
         height: 47,
         child: Row(
           children: <Widget>[

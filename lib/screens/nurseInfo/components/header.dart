@@ -11,7 +11,7 @@ class Header extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height * .289,
       width: MediaQuery.of(context).size.width,
-      decoration:const BoxDecoration(
+      decoration: const BoxDecoration(
         color: kBaseColor2,
       ),
       child: Stack(
@@ -29,11 +29,11 @@ class Header extends StatelessWidget {
           Align(
             alignment: Alignment.topLeft,
             child: Container(
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               margin: const EdgeInsets.only(top: 8, left: 8),
               child: GestureDetector(
                 onTap: () => Navigator.pop(context),
-                child:const Icon(
+                child: const Icon(
                   Icons.arrow_forward,
                   color: Colors.white,
                   size: 27,

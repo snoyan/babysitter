@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../person_info_screen.dart';
 
-
 class NurseDescription extends StatelessWidget {
   const NurseDescription({
     Key? key,
@@ -14,32 +13,32 @@ class NurseDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 5,left:20 ,right: 20,bottom: 15),
+      padding: const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Align(
+          const Align(
             alignment: Alignment.topRight,
-            child: Text("شرایط کاری پرستار:",
-            style: TextStyle(
-              color: Colors.black87,
-              fontFamily: "IranSans",
-              fontWeight: FontWeight.w900,
-              fontSize: 16
-          
-            ),
+            child: Text(
+              "شرایط کاری پرستار:",
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontFamily: "IranSans",
+                  fontWeight: FontWeight.w900,
+                  fontSize: 16),
             ),
           ),
-          SizedBox(height: 5,),
+          const SizedBox(
+            height: 5,
+          ),
           Text(
             agrs.nurse.workConditions,
-            style: TextStyle(
-        fontFamily: "IranSans", color: Colors.black,
-        fontSize: 13
-        ),
+            style: const TextStyle(
+                fontFamily: "IranSans", color: Colors.black, fontSize: 13),
           )
         ],
-      ),                );
+      ),
+    );
   }
 }

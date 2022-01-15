@@ -9,7 +9,7 @@ import 'components/nurse_document.dart';
 import 'components/nurse_information.dart';
 
 class NurseInfo extends StatelessWidget {
-  NurseInfo({Key? key}) : super(key: key);
+  const NurseInfo({Key? key}) : super(key: key);
   static String routeName = '/person_info';
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class NurseInfo extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   height: 45,
                   width: MediaQuery.of(context).size.width * 0.39,
                   child: ElevatedButton(
@@ -44,7 +44,7 @@ class NurseInfo extends StatelessWidget {
                         //isScrollControlled: true,
 
                         context: context,
-                        builder: (context) => NurseDocument(),
+                        builder: (context) => const NurseDocument(),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0),
                         ),
@@ -56,30 +56,30 @@ class NurseInfo extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 15,
                 ),
-                Container(
+                SizedBox(
                   height: 45,
                   width: MediaQuery.of(context).size.width * 0.39,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       fixedSize: const Size(70, 0),
                       primary: kBaseColor4,
-                      padding: EdgeInsets.all(0),
+                      padding: const EdgeInsets.all(0),
                     ),
                     onPressed: () {
                       showModalBottomSheet(
                         //isScrollControlled: true,
 
                         context: context,
-                        builder: (context) => NurseCall(),
+                        builder: (context) => const NurseCall(),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'اطلاعات تماس',
                       style: TextStyle(fontSize: 12, fontFamily: 'IranSans'),
                     ),
@@ -99,7 +99,7 @@ class NurseInfo extends StatelessWidget {
                   nurse: agrs.nurse,
                 ),
                 NurseInformation(agrs: agrs),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 NurseDescription(agrs: agrs)
