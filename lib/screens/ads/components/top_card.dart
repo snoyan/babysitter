@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../constant.dart';
 import '../../../models/nurse.dart';
 import '../../nurseInfo/nurse_info_screen.dart';
 
@@ -16,6 +17,7 @@ class TopCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Card(
+        color: kBaseColor5,
         child: Column(
           children: [
             Padding(
@@ -31,7 +33,7 @@ class TopCard extends StatelessWidget {
                 width: 70.0,
               ),
             ),
-            Text(' ${nurse.name}'),
+            Text(nurse.rating),
           ],
         ),
       ),

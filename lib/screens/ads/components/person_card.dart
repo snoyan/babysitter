@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../constant.dart';
 import '../../../models/nurse.dart';
 import '../../nurseInfo/nurse_info_screen.dart';
 
@@ -17,7 +18,7 @@ class PersonCard extends StatelessWidget {
     return GestureDetector(
       child: Container(
           decoration: const BoxDecoration(
-              color: Colors.white,
+              color: kBaseColor1,
               borderRadius: BorderRadius.all(Radius.circular(20))),
           child: Column(
             children: [

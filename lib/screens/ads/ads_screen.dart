@@ -53,10 +53,7 @@ class _AdsScreenState extends State<AdsScreen> {
                         foregroundColor: Colors.white,
                         onPressed: () {
                           print('pressed');
-                          showBottomSheet(
-                            context: context,
-                            builder: (context) => const SearchScreen(),
-                          );
+                          Navigator.pushNamed(context, "/search_screen");
                         },
                         child: const Icon(
                           Icons.search,
@@ -69,10 +66,6 @@ class _AdsScreenState extends State<AdsScreen> {
                         foregroundColor: Colors.white,
                         onPressed: () {
                           print('pressed');
-                          showBottomSheet(
-                            context: context,
-                            builder: (context) => const SearchScreen(),
-                          );
                         },
                         child: const Icon(
                           Icons.login,
