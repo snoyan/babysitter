@@ -1,5 +1,4 @@
 // ignore_for_file: implementation_imports, avoid_print
-
 import 'package:babysitter/components/person_card.dart';
 import 'package:babysitter/models/nurse.dart';
 import 'package:flutter/material.dart';
@@ -72,10 +71,12 @@ class _AdsScreenState extends State<AdsScreen> {
                       children: List.generate(
                         Nurses.length,
                         (index) {
-                          return  Padding(
-                            padding:const EdgeInsets.only(
+                          return Padding(
+                            padding: const EdgeInsets.only(
                                 top: 8.0, right: 20.0, left: 20.0),
-                            child: PersonCard(nurse:Nurses[index] ,),
+                            child: PersonCard(
+                              nurse: Nurses[index],
+                            ),
                           );
                         },
                       ),
