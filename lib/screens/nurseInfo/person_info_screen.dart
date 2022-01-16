@@ -10,7 +10,7 @@ import 'components/nurse_information.dart';
 
 class NurseInfo extends StatelessWidget {
   const NurseInfo({Key? key}) : super(key: key);
-  static String routeName = '/nurse_info';
+  static String routeName = '/person_info';
   @override
   Widget build(BuildContext context) {
     final NurseDetailsArguments agrs =

@@ -1,7 +1,7 @@
-import 'package:babysitter/constant.dart';
 import 'package:babysitter/screens/ads/components/top_card.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constant.dart';
 import '../../../data.dart';
 
 class TopNurse extends StatelessWidget {
@@ -15,21 +15,43 @@ class TopNurse extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10.0, right: 10.0),
       child: Container(
         height: 80,
-        color: kBaseColor1,
+        decoration: const BoxDecoration(
+            color: kBaseColor1,
+            borderRadius: BorderRadius.all(Radius.circular(20))),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Wrap(
-            children: List.generate(
-              Nurses.length,
-              (index) {
-                return TopCard(
-                  nurse: Nurses[index],
-                );
-              },
-            ),
+          child: Column(
+            children: [
+              Wrap(
+                children: List.generate(
+                  Nurses.length,
+                  (index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: TopCard(
+                        nurse: Nurses[index],
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
+// SingleChildScrollView(
+//           scrollDirection: Axis.horizontal,
+//           child: Wrap(
+//             children: List.generate(
+//               Nurses.length,
+//               (index) {
+//                 return TopCard(
+//                   nurse: Nurses[index],
+//                 );
+//               },
+//             ),
+//           ),
+//         ),

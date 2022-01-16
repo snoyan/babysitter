@@ -1,5 +1,7 @@
 import 'package:babysitter/screens/ads/ads_screen.dart';
+import 'package:babysitter/screens/nurse_signPage/nurse_signPage.dart';
 import 'package:flutter/material.dart';
+
 import '../../constant.dart';
 import 'components/animated_bottom_nav.dart';
 
@@ -34,6 +36,7 @@ class _MainScreenState extends State<MainScreen> {
             }),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
+          heroTag: const Text('btn1'),
           backgroundColor: kBaseColor2,
           child: Container(
             padding: const EdgeInsets.only(top: 6, left: 3),
@@ -48,7 +51,9 @@ class _MainScreenState extends State<MainScreen> {
               ),
             )),
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, NurseSignUp.routeName);
+          },
         )
 /*
           bottomNavigationBar: AnimatedBottomNav(

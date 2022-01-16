@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../../../constant.dart';
-import 'bottom_nav_Item.dart';
+import 'bottom_nav_item.dart';
 
 class AnimatedBottomNav extends StatelessWidget {
   final int currentIndex;

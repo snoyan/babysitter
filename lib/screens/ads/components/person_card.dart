@@ -1,10 +1,10 @@
 // ignore_for_file: avoid_print
 
+import 'package:babysitter/constant.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constant.dart';
 import '../../../models/nurse.dart';
-import '../../nurseInfo/nurse_info_screen.dart';
+import '../../nurseInfo/person_info_screen.dart';
 
 class PersonCard extends StatelessWidget {
   final Nurse nurse;
@@ -47,7 +47,7 @@ class PersonCard extends StatelessWidget {
           )),
       onTap: () {
         print('Pressed');
-        Navigator.pushNamed(context, '/nurse_info',
+        Navigator.pushNamed(context, '/person_info',
             arguments: NurseDetailsArguments(nurse: nurse));
       },
     );

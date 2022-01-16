@@ -7,7 +7,8 @@ import 'package:provider/provider.dart';
 import 'models/nurse.dart';
 
 class Data extends ChangeNotifier {
-  String text = 'پرستارها';
+  String text = 'صفحه\bاصلی';
+  List<Nurse> allNurse = Nurses;
 }
 
 List<Nurse> Nurses = [

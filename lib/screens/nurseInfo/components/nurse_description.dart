@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../nurse_info_screen.dart';
+import '../person_info_screen.dart';
 
 class NurseDescription extends StatelessWidget {
   const NurseDescription({

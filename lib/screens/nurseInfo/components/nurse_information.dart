@@ -1,7 +1,7 @@
 import 'package:babysitter/constant.dart';
 import 'package:flutter/material.dart';
 
-import '../nurse_info_screen.dart';
+import '../person_info_screen.dart';
 
 class NurseInformation extends StatelessWidget {
   const NurseInformation({
