@@ -1,6 +1,5 @@
 // ignore_for_file: implementation_imports, avoid_print
 import 'package:babysitter/components/person_card.dart';
-import 'package:babysitter/models/nurse.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 import '../../data.dart';
@@ -21,7 +20,7 @@ class _AdsScreenState extends State<AdsScreen> {
     return Scaffold(
       extendBody: true,
       body: Container(
-        padding: EdgeInsets.only(bottom: 60.0),
+        padding:const EdgeInsets.only(bottom: 60.0),
         child: Column(
           children: [
             Padding(
@@ -81,7 +80,7 @@ class _AdsScreenState extends State<AdsScreen> {
                         },
                       ),
                     ),
-                    SizedBox(
+                  const  SizedBox(
                       height: 40,
                     )
                   ],
