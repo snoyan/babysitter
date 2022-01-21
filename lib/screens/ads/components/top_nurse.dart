@@ -13,30 +13,26 @@ class TopNurse extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-      child: Container(
-        height: 80,
-        decoration: const BoxDecoration(
-            color: kBaseColor1,
-            borderRadius: BorderRadius.all(Radius.circular(20))),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Column(
-            children: [
-              Wrap(
-                children: List.generate(
-                  Nurses.length,
-                  (index) {
-                    return Padding(
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Column(
+          children: [
+            Wrap(
+              children: List.generate(
+                Nurses.length,
+                (index) {
+                  return Center(
+                    child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: TopCard(
                         nurse: Nurses[index],
                       ),
-                    );
-                  },
-                ),
+                    ),
+                  );
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

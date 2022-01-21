@@ -20,24 +20,24 @@ class TopCard extends StatelessWidget {
           decoration: const BoxDecoration(
               color: kBaseColor5,
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(4.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image: AssetImage(nurse.imgpath),
-                      ),
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(500))),
-                  height: 50.0,
-                  width: 70,
-                ),
-              ),
-              Text(nurse.rating),
-            ],
+          child: Container(
+            height: 76.0,
+            width: 76,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              border: Border.all(color: Color.fromARGB(22, 0, 0, 0), width: 2),
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(color: kBaseColor5, width: 4),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(nurse.imgpath),
+                  ),
+                  borderRadius: const BorderRadius.all(Radius.circular(50))),
+              height: 72.0,
+              width: 72,
+            ),
           )),
       onTap: () {
         print('Pressed');

@@ -3,6 +3,7 @@ import 'package:babysitter/screens/nurse_signPage/nurse_signPage.dart';
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
+import '../data.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -53,15 +54,6 @@ class _MainScreenState extends State<MainScreen> {
             Navigator.pushNamed(context, NurseSignUp.routeName);
           },
         )
-/*
-          bottomNavigationBar: AnimatedBottomNav(
-          
-          currentIndex: _currentPage,
-          onChange: (index) {
-            setState(() {
-              _currentPage = index;
-            });
-          }),*/
         );
   }
 
@@ -70,9 +62,41 @@ class _MainScreenState extends State<MainScreen> {
       case 0:
         return const Center(child: AdsScreen());
       case 1:
-        return const Center(
-            child: Text("صفحه پورفایل",
-                style: TextStyle(fontSize: 16, color: Colors.black)));
+        return Scaffold(
+          body: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(mainAxisSize: MainAxisSize.min, children: [
+                  ...List.generate(
+                      states.length,
+                      (index) => SizedBox(
+                            width: MediaQuery.of(context).size.width,
+                            child: GestureDetector(
+                              onTap: () {
+                                print('taped');
+                                setState(() {
+                                  states[index].isSelected == false
+                                      ? states[index].isSelected = true
+                                      : states[index].isSelected = false;
+                                });
+                              },
+                              child: Card(
+                                color: states[index].isSelected
+                                    ? Colors.red[100]
+                                    : Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: Text(
+                                    states[index].stateName.toString(),
+                                    style: const TextStyle(fontSize: 22.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )),
+                ]),
+              ),
+            
+        );
       case 2:
         return const Center(
             child: Text(" صفحه ارتباط با ما ",
@@ -111,7 +135,7 @@ class AnimatedBottomNav extends StatelessWidget {
                 onTap: () => onChange(1),
                 child: BottomNavItem(
                   icon: Icons.verified_user,
-                  title: "پورفایل",
+                  title: "استان",
                   isActive: currentIndex == 1,
                 ),
               ),

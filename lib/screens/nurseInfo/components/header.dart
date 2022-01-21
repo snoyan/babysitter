@@ -1,5 +1,6 @@
 import 'package:babysitter/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import '../../../models/nurse.dart';
 
@@ -41,6 +42,55 @@ class Header extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10, left: 10),
+            child: Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.51,
+                decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.2),
+                    borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(8),
+                        bottomLeft: Radius.circular(8))),
+                padding: const EdgeInsets.all(5),
+                child: Row(
+                  children: [
+                    RatingBar.builder(
+                      maxRating: 10,
+                      itemSize: 25,
+                      initialRating: 3,
+                      ignoreGestures: true,
+                      minRating: 1,
+                      direction: Axis.horizontal,
+                      allowHalfRating: true,
+                      itemCount: 5,
+                      itemPadding:const EdgeInsets.symmetric(horizontal: 0.0),
+                      itemBuilder: (context, x) => const Icon(
+                        Icons.star,
+                        size: 22,
+                        color: Colors.amber,
+                      ),
+                      onRatingUpdate: (rating) {
+                        print(rating);
+                      },
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Text(
+                      nurse.rating,
+                      style: const TextStyle(
+                          color: Colors.amber,
+                          fontFamily: 'iransans',
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );

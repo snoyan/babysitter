@@ -12,8 +12,8 @@ class Advertising extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: SingleChildScrollView(
-        child: Wrap(
-          children: List.generate(
+        child: Wrap(children: [
+          ...List.generate(
             Nurses.length,
             (index) {
               return Padding(
@@ -24,7 +24,10 @@ class Advertising extends StatelessWidget {
               );
             },
           ),
-        ),
+         const SizedBox(
+            height: 330,
+          )
+        ]),
       ),
     );
   }

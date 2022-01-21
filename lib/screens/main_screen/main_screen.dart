@@ -35,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
               });
             }),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
+          floatingActionButton: FloatingActionButton(
           heroTag: const Text('btn1'),
           backgroundColor: kBaseColor2,
           child: Container(
