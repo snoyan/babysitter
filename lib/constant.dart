@@ -18,3 +18,17 @@ const Color kBaseColor4 = Color(0xff104581);
 const Color kBaseColor5 = Color(0xFFAA95FA); ///
 
 enum Gender { female,male }
+
+final RegExp emailValidatorRegExp =
+    RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+const String kEmailNullError = "لطفا ایمیل خود را وارد کنید";
+const String kInvalidEmailError = "ایمیل وارد شده نا معتبر است!";
+const String kPassNullError = "رمز عبور خود را وارد کنید";
+const String kShortPassError = "رمز وارد شده کوتاه است";
+const String kMatchPassError = "رمز وارد شده همخوانی ندارد";
+const String kUsernameNullError = "نام کاربری خود را وارد کنید";
+const String kShortUserNameError =
+    "نام کاربری وارد شده نباید کمتر از سه حرف باشد";
+const String kNameNullError = "نام خود را وارد کنید";
+const String kPhoneNumberNullError = "شماره تماس خود را وارد کنید";
+const String kAddressNullError = "آدرس خود را وارد کنید";

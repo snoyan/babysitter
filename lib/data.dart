@@ -2,13 +2,14 @@
 
 import 'package:babysitter/constant.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'models/nurse.dart';
 import 'models/states.dart';
 
 class Data extends ChangeNotifier {
-  String text = 'صفحه\bاصلی';
+  String mainTitle = 'صفحه\bاصلی';
   List<Nurse> allNurse = Nurses;
 }
 

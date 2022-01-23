@@ -9,11 +9,12 @@ import 'components/my_title.dart';
 import 'components/top_nurse.dart';
 
 class AdsScreen extends StatefulWidget {
-  const AdsScreen({
+  AdsScreen({
+    required this.stateindex,
     Key? key,
   }) : super(key: key);
   static String routeName = '/ads_screen';
-
+  int stateindex;
   @override
   State<AdsScreen> createState() => _AdsScreenState();
 }
@@ -24,13 +25,12 @@ class _AdsScreenState extends State<AdsScreen> {
     return Scaffold(
       extendBody: true,
       body: Column(
-        children: const [
-           HeadLine(),
-           MyTitle(label: 'پرستاران برتر'),
-           TopNurse(),
-           MyTitle(label: 'آگهی ها'),
-           Advertising(),
-          
+        children: [
+          HeadLine(stateIndex: widget.stateindex),
+          const MyTitle(label: 'پرستاران برتر'),
+          const TopNurse(),
+          const MyTitle(label: 'آگهی ها'),
+          const Advertising(),
         ],
       ),
     );
@@ -38,10 +38,11 @@ class _AdsScreenState extends State<AdsScreen> {
 }
 
 class HeadLine extends StatelessWidget {
-  const HeadLine({
+  HeadLine({
+    required this.stateIndex,
     Key? key,
   }) : super(key: key);
-
+  int stateIndex;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -52,8 +53,9 @@ class HeadLine extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 2.0),
             child: Text(
-              context.watch<Data>().text,
-              style: const TextStyle(color: Colors.white, fontSize: 20),
+              states[stateIndex].stateName,
+              style: const TextStyle(
+                  color: Colors.white, fontSize: 20, fontFamily: 'iransans'),
             ),
           ),
           Row(

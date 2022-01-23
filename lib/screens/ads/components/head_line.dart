@@ -20,7 +20,7 @@ class HeadLine extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 2.0),
               child: Text(
-                data.text,
+                data.mainTitle,
                 style: const TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),

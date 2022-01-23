@@ -1,3 +1,4 @@
+import 'package:babysitter/constant.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavItem extends StatelessWidget {
@@ -38,8 +39,10 @@ class BottomNavItem extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
+                      // color: Colors.white,
+                      fontFamily: "iransans",
                       fontWeight: FontWeight.bold,
-                      color: activeColor ?? Theme.of(context).primaryColor,
+                      color: activeColor ?? kBaseColor5,
                     ),
                   ),
                   const SizedBox(height: 5.0),

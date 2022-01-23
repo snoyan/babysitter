@@ -22,6 +22,7 @@ class MyTitle extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 18,
                 color: Colors.white,
+                fontFamily: 'iransans'
               ),
             ),
           ],

@@ -24,6 +24,7 @@ class AnimatedBottomNav extends StatelessWidget {
                 child: BottomNavItem(
                   icon: Icons.home,
                   title: "آگهی ها",
+                  
                   isActive: currentIndex == 0,
                 ),
               ),
@@ -33,7 +34,7 @@ class AnimatedBottomNav extends StatelessWidget {
                 onTap: () => onChange(1),
                 child: BottomNavItem(
                   icon: Icons.verified_user,
-                  title: "پورفایل",
+                  title: "استان ها",
                   isActive: currentIndex == 1,
                 ),
               ),
